@@ -65,9 +65,9 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     // MARK: UIImagePickerController Delegates
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // To select an image and set it to imageView
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imagePickerView.image = image
             self.view.layoutIfNeeded()
             setZoomScaleForImage(scrollViewSize: scrollView.bounds.size)
@@ -83,13 +83,13 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     // MARK: Notification Functions
     func subscribeToKeyboardNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func unsubscribeFromKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     // MARK: Keyboard Methods and Delegates
@@ -99,7 +99,7 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         view.frame.origin.y = 0
     }
     
@@ -121,9 +121,9 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func save(memedImage: UIImage) {
-        let meme = Meme(topText: topTextField.text! as NSString!, bottomText: bottomTextField.text! as NSString!,  image: imagePickerView.image, memedImage: memedImage)
+        let meme = Meme(topText: topTextField.text! as NSString?, bottomText: bottomTextField.text! as NSString?,  image: imagePickerView.image, memedImage: memedImage)
         (UIApplication.shared.delegate as!
-            AppDelegate).memes.append(meme)
+            AppDelegate).meme.append(meme)
     }
     
     //MARK: Top Bar Button
