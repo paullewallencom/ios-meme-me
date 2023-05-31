@@ -206,6 +206,14 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
 
 extension MemeMeViewController: UITextFieldDelegate {
     //MARK: UITextField Extension
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var text = textField.text as NSString?
+        text = text!.replacingCharacters(in: range, with: string) as NSString?
+        
+        textField.text = text?.uppercased
+        return false
+    }
+    
     func setTextFields(textField: UITextField, string: String) {
         textField.defaultTextAttributes = AppModel.memeTextAttributes
         textField.text = string
@@ -221,25 +229,17 @@ extension MemeMeViewController: UITextFieldDelegate {
         }
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        var text = textField.text as NSString?
-        text = text!.replacingCharacters(in: range, with: string) as NSString?
-        
-        textField.text = text?.uppercased
-        return false
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == topTextField && textField.text!.isEmpty {
             textField.text = AppModel.defaultTopTextFieldText;
         }else if textField == bottomTextField && textField.text!.isEmpty {
             textField.text = AppModel.defaultBottomTextFieldText;
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
