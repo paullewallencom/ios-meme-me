@@ -123,7 +123,7 @@ class MemeMeViewController: UIViewController, UIImagePickerControllerDelegate, U
     func save(memedImage: UIImage) {
         let meme = Meme(topText: topTextField.text! as NSString?, bottomText: bottomTextField.text! as NSString?,  image: imagePickerView.image, memedImage: memedImage)
         (UIApplication.shared.delegate as!
-            AppDelegate).memes.append(meme)
+            AppDelegate).meme.append(meme)
     }
     
     //MARK: Top Bar Button
@@ -220,15 +220,6 @@ extension MemeMeViewController: UITextFieldDelegate {
         textField.textAlignment = NSTextAlignment.center
         textField.delegate = self;
     }
-    
-    /*
-     static let memeTextAttributes: [NSAttributedString.Key: Any] = [
-             NSAttributedString.Key.strokeColor     : UIColor.black,
-             NSAttributedString.Key.foregroundColor : UIColor.white,
-             NSAttributedString.Key.font            : UIFont(name: "system", size: 32)!,
-             NSAttributedString.Key.strokeWidth     : 1.0
-         ]
-     */
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == topTextField && textField.text == AppModel.defaultTopTextFieldText {
