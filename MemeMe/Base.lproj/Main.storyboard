@@ -16,13 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2km-DT-rcf">
-                                <rect key="frame" x="87" y="250" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-ya-xbY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="HaF-Hl-u9O"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-O1-2yg" userLabel="TextField Top ">
+                                <rect key="frame" x="0.0" y="100" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2km-DT-rcf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-Eq-O9E">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaR-WF-tFt" userLabel="TextField Bottom">
+                                <rect key="frame" x="0.0" y="678" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-Eq-O9E">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem title="Item" id="gGV-Zg-WOh"/>
                                 </items>
@@ -30,11 +44,29 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J3H-ya-xbY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="80N-lm-5p5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fCI-Eq-O9E" secondAttribute="trailing" id="GWP-8k-tiS"/>
+                            <constraint firstItem="fCI-Eq-O9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JkG-6K-L6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J3H-ya-xbY" secondAttribute="trailing" id="MeD-qk-9Jb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fCI-Eq-O9E" secondAttribute="bottom" id="P51-EI-wXt"/>
+                            <constraint firstItem="2km-DT-rcf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TeX-PP-nZw"/>
+                            <constraint firstItem="uHe-O1-2yg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Tyh-bA-Y8H"/>
+                            <constraint firstItem="2km-DT-rcf" firstAttribute="bottom" secondItem="fCI-Eq-O9E" secondAttribute="top" id="WXy-tU-c3g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2km-DT-rcf" secondAttribute="trailing" id="bFf-5w-jjZ"/>
+                            <constraint firstItem="2km-DT-rcf" firstAttribute="top" secondItem="J3H-ya-xbY" secondAttribute="bottom" id="hWF-h4-toU"/>
+                            <constraint firstItem="J3H-ya-xbY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hsk-3D-FTE"/>
+                            <constraint firstItem="uHe-O1-2yg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o99-mb-24q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RaR-WF-tFt" secondAttribute="trailing" id="ouH-zs-MNY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uHe-O1-2yg" secondAttribute="trailing" id="wWF-N8-1gg"/>
+                            <constraint firstItem="RaR-WF-tFt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xkA-6q-h5O"/>
+                            <constraint firstItem="RaR-WF-tFt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgm-sF-Ssh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="50"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="49.553571428571423"/>
         </scene>
     </scenes>
     <resources>
