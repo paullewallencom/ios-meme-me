@@ -13,9 +13,7 @@
 		74316C772A26F73600A0659C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74316C752A26F73600A0659C /* Main.storyboard */; };
 		74316C792A26F73C00A0659C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74316C782A26F73C00A0659C /* Assets.xcassets */; };
 		74316C7C2A26F73C00A0659C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74316C7A2A26F73C00A0659C /* LaunchScreen.storyboard */; };
-		74C4A8A32A27E13E00E35481 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4A8A22A27E13E00E35481 /* AppModel.swift */; };
 		74C4A8A52A27EBC600E35481 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4A8A42A27EBC600E35481 /* Meme.swift */; };
-		74C4A8A72A27EC7600E35481 /* FontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4A8A62A27EC7600E35481 /* FontTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +25,7 @@
 		74316C782A26F73C00A0659C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74316C7B2A26F73C00A0659C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74316C7D2A26F73C00A0659C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74C4A8A22A27E13E00E35481 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		74C4A8A42A27EBC600E35481 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
-		74C4A8A62A27EC7600E35481 /* FontTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				74C4A8A42A27EBC600E35481 /* Meme.swift */,
-				74C4A8A22A27E13E00E35481 /* AppModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				74316C732A26F73600A0659C /* MemeMeViewController.swift */,
-				74C4A8A62A27EC7600E35481 /* FontTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,11 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74C4A8A72A27EC7600E35481 /* FontTableViewController.swift in Sources */,
 				74316C742A26F73600A0659C /* MemeMeViewController.swift in Sources */,
 				74316C702A26F73600A0659C /* AppDelegate.swift in Sources */,
 				74316C722A26F73600A0659C /* SceneDelegate.swift in Sources */,
-				74C4A8A32A27E13E00E35481 /* AppModel.swift in Sources */,
 				74C4A8A52A27EBC600E35481 /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +333,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.BoostAlive.MemeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -369,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.BoostAlive.MemeMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

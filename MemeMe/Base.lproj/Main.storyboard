@@ -19,26 +19,38 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-ya-xbY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="HaF-Hl-u9O"/>
+                                    <navigationItem title="Title" id="rhG-op-bjd"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-O1-2yg" userLabel="TextField Top ">
-                                <rect key="frame" x="0.0" y="100" width="414" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-O1-2yg" userLabel="TextField Top ">
+                                <rect key="frame" x="0.0" y="112" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2km-DT-rcf">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaR-WF-tFt" userLabel="TextField Bottom">
-                                <rect key="frame" x="0.0" y="678" width="414" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RaR-WF-tFt" userLabel="TextField Bottom">
+                                <rect key="frame" x="0.0" y="754" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-Eq-O9E">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Item" id="gGV-Zg-WOh"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="H3g-lH-YlY"/>
+                                    <barButtonItem title="Table" image="camera" catalog="system" style="plain" id="2Di-sY-k6c">
+                                        <connections>
+                                            <action selector="cameraButtonAction:" destination="BYZ-38-t0r" id="Mj2-YP-wcO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Kxr-cG-P9d"/>
+                                    <barButtonItem title="Album" id="gGV-Zg-WOh">
+                                        <connections>
+                                            <action selector="photoLibraryAction:" destination="BYZ-38-t0r" id="nHI-ta-lLg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rMd-zC-vk0"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -46,6 +58,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="J3H-ya-xbY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="80N-lm-5p5"/>
+                            <constraint firstItem="uHe-O1-2yg" firstAttribute="top" secondItem="J3H-ya-xbY" secondAttribute="bottom" constant="24" id="EQm-2l-f93"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fCI-Eq-O9E" secondAttribute="trailing" id="GWP-8k-tiS"/>
                             <constraint firstItem="fCI-Eq-O9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JkG-6K-L6g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J3H-ya-xbY" secondAttribute="trailing" id="MeD-qk-9Jb"/>
@@ -56,6 +69,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2km-DT-rcf" secondAttribute="trailing" id="bFf-5w-jjZ"/>
                             <constraint firstItem="2km-DT-rcf" firstAttribute="top" secondItem="J3H-ya-xbY" secondAttribute="bottom" id="hWF-h4-toU"/>
                             <constraint firstItem="J3H-ya-xbY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hsk-3D-FTE"/>
+                            <constraint firstItem="RaR-WF-tFt" firstAttribute="bottom" secondItem="fCI-Eq-O9E" secondAttribute="top" constant="24" id="mCp-Yq-N4e"/>
                             <constraint firstItem="uHe-O1-2yg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o99-mb-24q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RaR-WF-tFt" secondAttribute="trailing" id="ouH-zs-MNY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uHe-O1-2yg" secondAttribute="trailing" id="wWF-N8-1gg"/>
@@ -63,6 +77,17 @@
                             <constraint firstItem="RaR-WF-tFt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zgm-sF-Ssh"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomTextField" destination="RaR-WF-tFt" id="8wV-8H-BQm"/>
+                        <outlet property="cameraButton" destination="2Di-sY-k6c" id="XA2-TG-DSh"/>
+                        <outlet property="imageView" destination="2km-DT-rcf" id="snP-cM-HB7"/>
+                        <outlet property="navigationBar" destination="J3H-ya-xbY" id="Mc6-vd-Bxb"/>
+                        <outlet property="photoLibraryButton" destination="gGV-Zg-WOh" id="YtA-j8-2OA"/>
+                        <outlet property="toolBar" destination="fCI-Eq-O9E" id="X1j-1V-NAO"/>
+                        <outlet property="topTextField" destination="uHe-O1-2yg" id="fS0-Iv-c2J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -24,9 +24,9 @@ struct AppModel {
     }
     
     static let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor     : UIColor.black,
-        NSAttributedString.Key.foregroundColor : UIColor.white,
-        NSAttributedString.Key.font            : UIFont(name: "system", size: 32)!,
-        NSAttributedString.Key.strokeWidth     : 1.0
+        NSAttributedStringKey.strokeColor.rawValue     : UIColor.black,
+        NSAttributedStringKey.foregroundColor.rawValue : UIColor.white,
+        NSAttributedStringKey.font.rawValue            : UIFont(name: "system", size: 32)!,
+        NSAttributedStringKey.strokeWidth.rawValue     : 1.0
     ]
 }
