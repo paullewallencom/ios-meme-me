@@ -19,7 +19,10 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-ya-xbY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="rhG-op-bjd"/>
+                                    <navigationItem id="rhG-op-bjd">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="je0-Ap-Mi8"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="CtS-mK-x3b"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TOP TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHe-O1-2yg" userLabel="TextField Top ">
@@ -80,9 +83,12 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="albumButton" destination="gGV-Zg-WOh" id="2hU-Pk-Tp9"/>
                         <outlet property="bottomTextField" destination="RaR-WF-tFt" id="8wV-8H-BQm"/>
                         <outlet property="cameraButton" destination="2Di-sY-k6c" id="XA2-TG-DSh"/>
                         <outlet property="imageView" destination="2km-DT-rcf" id="snP-cM-HB7"/>
+                        <outlet property="imageViewPicker" destination="2km-DT-rcf" id="PLb-YX-TGG"/>
+                        <outlet property="navBar" destination="J3H-ya-xbY" id="V6b-0F-o5Y"/>
                         <outlet property="navigationBar" destination="J3H-ya-xbY" id="Mc6-vd-Bxb"/>
                         <outlet property="photoLibraryButton" destination="gGV-Zg-WOh" id="YtA-j8-2OA"/>
                         <outlet property="toolBar" destination="fCI-Eq-O9E" id="X1j-1V-NAO"/>
@@ -96,6 +102,7 @@
     </scenes>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
